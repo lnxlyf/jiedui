@@ -1,0 +1,73 @@
+<extend name="Base/common"/>
+<block name="body">
+	<div class="col-xs-12">
+      	</br>
+		</br>
+		</head>
+
+<body>
+ <h1 align="center"><strong>Appraise Index</strong> </h1>
+               
+</body>
+</html>
+</br>
+</br>
+	   <table width="100%" border="1">
+		  <tr>
+			<td>Start Time</td>
+			<td>End Time</td>
+		  </tr>
+		  <volist name="sessions" id="vo">
+			  <tr>
+				<td>{:date('Y-m-d',$vo['sTime'])}</td>
+				<td>{:date('Y-m-d',$vo['eTime'])}</td>
+			  </tr>
+			  <php>if(time()>$vo['sTime'] && time()<$vo['eTime']){</php>
+			  <tr>
+			  	<td colspan="2">
+					<form action="{:U('doAppraise')}" method="POST">
+					  	Score<input name="point" type="text"><br/>
+					  	Comment<input name="content" type="text"><br/>
+					  	Anonymous<input name="anonymous" type="radio" value="0"/>Not Anonymous
+					  	<input name="anonymous" type="radio" value="1"/>Anonymous<br/>
+					  	<button type="submit">Appraise</button>
+					  	<input name="uid" type="hidden" value="{$uid}">
+					  	<input name="lessonId" type="hidden" value="{$lessonId}">
+					  	<input name="sessionId" type="hidden" value="{$vo['id']}">
+					</form>
+			  	</td>
+			  </tr>
+			  <php>}</php>
+		  </volist>
+		</table>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+	</div>
+</block>
+
+
+
+
+
+
+
+
+
+

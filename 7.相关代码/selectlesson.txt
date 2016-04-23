@@ -1,0 +1,84 @@
+<extend name="Base/common"/>
+<block name="style">
+<div class="col-xs-12">
+
+		</br>
+		</br>
+		</br>
+		</br>
+		</head>
+
+<body>
+
+ <h1 align="center"><strong>Teacher Index</strong> </h1>
+               
+</body>
+</html>
+</br>
+		</br>
+<link href="__CSS__/event.css" rel="stylesheet" type="text/css" />
+</block>
+<block name="body">
+<div id="frm-post-popup " class="white-popup1 boxShadowBoeder col-xs-12"
+	style="padding-bottom:20px">
+
+	<div class="col-xs-12">
+     
+	   <div class="word-wrap detail"
+		style="padding: 5px 20px 10px 20px; color: #848484">
+		<table id="table-data"
+			class="table table-bordered table-striped table-hover">
+			
+			<thead>
+				<tr>
+					<th>{:L('Name')}</th>
+					<th>{:L('Point')}</th>
+					<th>{:L('Operate')}</th>
+					<a>
+				</tr>
+			</thead>
+			<tbody>
+				<volist name="teachers" id="vo">
+				<tr>
+					<td> {$vo.nickname}</td>
+					<td>{$vo.point}</td>
+					<td>
+					<a href="{:U('selectLesson',array('uid'=>$vo['uid']))}"
+                               class="btn btn-primary"> {:L('Operate')}</a>
+                               <a href="{:U('showAppraise',array('uid'=>$vo['uid']))}"
+                               class="btn btn-primary"> {:L('showAppraise')}</a>
+					</td>
+				</tr>
+				</volist>
+			</tbody>
+		</table>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+	</div>
+	</div>
+	
+	</div>
+</div>
+</block>
+
+
+
+
+
+
+
+
+
+
+
+
